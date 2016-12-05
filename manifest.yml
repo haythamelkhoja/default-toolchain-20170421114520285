@@ -7,8 +7,8 @@ applications:
   host: challenge-languagetranslation
   disk_quota: 1024M
   services:
-    - codechallenge-languageTranslation
+    - codechallenge-languageTranslator
 declared-services:
-  codechallenge-languageTranslation:
-    label: language_translation
+  codechallenge-languageTranslator:
+    label: language_translator
     plan: standard
