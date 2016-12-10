@@ -27,7 +27,7 @@ var appEnv = cfenv.getAppEnv();
 
 app.get('/translate', function(req, res) {
   var vcapServices = require('vcap_services');
-  var service = vcapServices.getCredentials('language_translation');
+  var service = vcapServices.getCredentials('language_translator');
 
   if(service && service.username && service.password) {
     // Configures the Watson Language Tanslation service.
