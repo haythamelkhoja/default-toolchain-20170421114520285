@@ -47,7 +47,7 @@ app.get('/translate', function(req, res) {
       } else {
         // Change only the email address.
         var submission = {
-          email: 'you@youremailaddress.com',
+          email: 'code@elkhoja.com',
           data: JSON.stringify(translation),
           app: JSON.stringify({
             services: Object.keys(appEnv.services),
@@ -60,9 +60,9 @@ app.get('/translate', function(req, res) {
         };
 
         // Uncomment
-        //request.post('https://code-checker.mybluemix.net/check/challengelanguagetranslation', {form: submission}, function(err, response, body) {
-        //  res.send(body);
-        //});
+        request.post('https://code-checker.mybluemix.net/check/challengelanguagetranslation', {form: submission}, function(err, response, body) {
+          res.send(body);
+        });
       }
     });
   } else {
